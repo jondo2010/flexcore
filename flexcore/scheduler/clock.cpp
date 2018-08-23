@@ -5,7 +5,7 @@
  *      Author: ckielwein
  */
 
-#include <flexcore/scheduler/clock.hpp>
+#include "scheduler/clock.hpp"
 
 namespace fc
 {

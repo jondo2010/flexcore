@@ -1,8 +1,8 @@
 #include <boost/test/unit_test.hpp>
 
-#include <flexcore/utils/settings/settings_container.hpp>
-#include <flexcore/utils/settings/jsonfile_setting_backend.hpp>
-#include <flexcore/ports.hpp>
+#include "utils/settings/settings_container.hpp"
+#include "utils/settings/jsonfile_setting_backend.hpp"
+#include "ports.hpp"
 
 using namespace fc;
 

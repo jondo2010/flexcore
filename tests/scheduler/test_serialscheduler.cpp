@@ -1,6 +1,7 @@
 #include <boost/test/unit_test.hpp>
 
-#include <flexcore/scheduler/serialschedulers.hpp>
+#include "scheduler/serialschedulers.hpp"
+
 #include <future>
 
 namespace

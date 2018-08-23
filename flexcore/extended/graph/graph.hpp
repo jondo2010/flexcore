@@ -1,7 +1,7 @@
 #ifndef SRC_GRAPH_GRAPH_HPP_
 #define SRC_GRAPH_GRAPH_HPP_
 
-#include <flexcore/core/traits.hpp>
+#include "core/traits.hpp"
 
 #include <boost/functional/hash.hpp>
 #include <boost/uuid/uuid.hpp>

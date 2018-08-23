@@ -1,7 +1,7 @@
 #ifndef SRC_NODES_PURE_NODE_HPP_
 #define SRC_NODES_PURE_NODE_HPP_
 
-#include <flexcore/pure/pure_ports.hpp>
+#include "pure/pure_ports.hpp"
 
 namespace fc
 {

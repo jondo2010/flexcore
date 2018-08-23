@@ -1,8 +1,9 @@
 #ifndef SRC_EXTENDED_NODE_FWD_HPP_
 #define SRC_EXTENDED_NODE_FWD_HPP_
 
-#include <flexcore/extended/graph/graph.hpp>
-#include <flexcore/scheduler/parallelregion.hpp>
+#include "extended/graph/graph.hpp"
+#include "scheduler/parallelregion.hpp"
+
 #include <memory>
 #include <string>
 

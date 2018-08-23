@@ -1,12 +1,12 @@
 #include <boost/test/unit_test.hpp>
 #include <boost/graph/graph_utility.hpp>
 
-#include <flexcore/extended/graph/graph.hpp>
-#include <flexcore/extended/graph/graph_connectable.hpp>
-#include <flexcore/extended/base_node.hpp>
-#include <flexcore/extended/nodes/terminal.hpp>
-#include <flexcore/ports.hpp>
-#include <flexcore/scheduler/cyclecontrol.hpp>
+#include "extended/graph/graph.hpp"
+#include "extended/graph/graph_connectable.hpp"
+#include "extended/base_node.hpp"
+#include "extended/nodes/terminal.hpp"
+#include "ports.hpp"
+#include "scheduler/cyclecontrol.hpp"
 
 #include <boost/mpl/list.hpp>
 

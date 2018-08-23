@@ -1,11 +1,11 @@
 #ifndef SRC_PORTS_STATES_STATE_SINK_HPP_
 #define SRC_PORTS_STATES_STATE_SINK_HPP_
 
-#include <flexcore/core/connection_util.hpp>
-#include <flexcore/core/exceptions.hpp>
-#include <flexcore/pure/detail/port_traits.hpp>
-#include <flexcore/pure/detail/port_utils.hpp>
-#include <flexcore/pure/detail/active_connection_proxy.hpp>
+#include "core/connection_util.hpp"
+#include "core/exceptions.hpp"
+#include "pure/detail/port_traits.hpp"
+#include "pure/detail/port_utils.hpp"
+#include "pure/detail/active_connection_proxy.hpp"
 
 #include <functional>
 #include <memory>

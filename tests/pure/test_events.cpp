@@ -1,10 +1,10 @@
 #include <boost/test/unit_test.hpp>
 
-#include <flexcore/pure/event_sinks.hpp>
-#include <flexcore/pure/event_sources.hpp>
-#include <flexcore/core/connection.hpp>
+#include "pure/event_sinks.hpp"
+#include "pure/event_sources.hpp"
+#include "core/connection.hpp"
 
-#include <tests/pure/sink_fixture.hpp>
+#include "sink_fixture.hpp"
 
 BOOST_AUTO_TEST_SUITE(test_events)
 

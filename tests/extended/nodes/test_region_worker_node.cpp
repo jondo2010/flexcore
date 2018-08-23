@@ -1,10 +1,11 @@
 #include <boost/test/unit_test.hpp>
-#include <flexcore/scheduler/parallelregion.hpp>
-#include <flexcore/extended/nodes/region_worker_node.hpp>
-#include <flexcore/ports.hpp>
 
-#include "nodes/owning_node.hpp"
-#include <pure/sink_fixture.hpp>
+#include "scheduler/parallelregion.hpp"
+#include "extended/nodes/region_worker_node.hpp"
+#include "ports.hpp"
+
+#include "../../nodes/owning_node.hpp"
+#include "../../pure/sink_fixture.hpp"
 
 BOOST_AUTO_TEST_SUITE(test_region_worker)
 

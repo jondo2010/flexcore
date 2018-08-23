@@ -5,9 +5,9 @@
 #include <functional>
 #include <vector>
 
-#include <flexcore/core/connection.hpp>
-#include <flexcore/core/traits.hpp>
-#include <flexcore/pure/detail/port_traits.hpp>
+#include "core/connection.hpp"
+#include "core/traits.hpp"
+#include "pure/detail/port_traits.hpp"
 
 namespace fc
 {

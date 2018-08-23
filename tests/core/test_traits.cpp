@@ -10,7 +10,7 @@
 
 #include <boost/test/unit_test.hpp>
 
-#include <flexcore/core/traits.hpp>
+#include "core/traits.hpp"
 
 #include <iostream>
 #include <type_traits>

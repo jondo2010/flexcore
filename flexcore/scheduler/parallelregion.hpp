@@ -8,8 +8,9 @@
 #ifndef SRC_SCHEDULER_PARALLELREGION_HPP_
 #define SRC_SCHEDULER_PARALLELREGION_HPP_
 
-#include <flexcore/pure/event_sources.hpp>
-#include <flexcore/scheduler/clock.hpp>
+#include "pure/event_sources.hpp"
+#include "scheduler/clock.hpp"
+
 #include <string>
 #include <memory>
 

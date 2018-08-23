@@ -2,18 +2,18 @@
 
 ///\example examples.cpp
 //This header includes the default definitions of ports
-#include <flexcore/ports.hpp>
+#include "flexcore/ports.hpp"
 
 // This Header includes the code for multiplexing streams.
-#include <flexcore/pure/mux_ports.hpp>
+#include "flexcore/pure/mux_ports.hpp"
 // This header includes several useful connectables.
-#include <flexcore/core/connectables.hpp>
+#include "flexcore/core/connectables.hpp"
 // This header includes the algorithms which work on ranges.
-#include <flexcore/range/actions.hpp>
+#include "flexcore/range/actions.hpp"
 
-#include <flexcore/extended/nodes/terminal.hpp>
-#include <flexcore/extended/nodes/buffer.hpp>
-#include <flexcore/pure/pure_node.hpp>
+#include "flexcore/extended/nodes/terminal.hpp"
+#include "flexcore/extended/nodes/buffer.hpp"
+#include "flexcore/pure/pure_node.hpp"
 
 // We need to pull operator >> of flexcore to our local namespace.
 // Otherwise the operator cannot be found if we connect elements,

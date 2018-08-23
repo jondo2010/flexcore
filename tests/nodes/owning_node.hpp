@@ -1,8 +1,8 @@
 #ifndef TESTS_NODES_OWNING_NODE_HPP_
 #define TESTS_NODES_OWNING_NODE_HPP_
 
-#include <flexcore/extended/base_node.hpp>
-#include <flexcore/scheduler/cyclecontrol.hpp>
+#include "extended/base_node.hpp"
+#include "scheduler/cyclecontrol.hpp"
 
 namespace fc
 {

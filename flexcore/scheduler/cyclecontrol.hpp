@@ -1,10 +1,10 @@
 #ifndef SRC_THREADING_CYCLECONTROL_HPP_
 #define SRC_THREADING_CYCLECONTROL_HPP_
 
-#include <flexcore/scheduler/clock.hpp>
-#include <flexcore/scheduler/scheduler.hpp>
-#include <flexcore/scheduler/parallelregion.hpp>
-#include <flexcore/pure/event_sources.hpp>
+#include "scheduler/clock.hpp"
+#include "scheduler/scheduler.hpp"
+#include "scheduler/parallelregion.hpp"
+#include "pure/event_sources.hpp"
 
 #include <cassert>
 #include <condition_variable>

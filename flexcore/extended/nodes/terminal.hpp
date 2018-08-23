@@ -8,7 +8,7 @@
 #ifndef FLEXCORE_EXTENDED_NODES_TERMINAL_HPP_
 #define FLEXCORE_EXTENDED_NODES_TERMINAL_HPP_
 
-#include <flexcore/extended/base_node.hpp>
+#include "extended/base_node.hpp"
 
 namespace fc
 {

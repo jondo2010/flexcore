@@ -1,7 +1,7 @@
 #ifndef SRC_VISUALIZATION_HPP_
 #define SRC_VISUALIZATION_HPP_
 
-#include <flexcore/extended/base_node.hpp>
+#include "extended/base_node.hpp"
 
 #include <iosfwd>
 #include <memory>

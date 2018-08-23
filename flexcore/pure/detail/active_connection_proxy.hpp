@@ -1,9 +1,9 @@
 #ifndef SRC_PORTS_DETAIL_ACTIVE_SOURCE_PROXY_HPP_
 #define SRC_PORTS_DETAIL_ACTIVE_SOURCE_PROXY_HPP_
 
-#include <flexcore/core/connection.hpp>
-#include <flexcore/core/traits.hpp>
-#include <flexcore/pure/port_connection.hpp>
+#include "core/connection.hpp"
+#include "core/traits.hpp"
+#include "pure/port_connection.hpp"
 
 #include <cassert>
 

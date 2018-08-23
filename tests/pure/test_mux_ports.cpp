@@ -1,7 +1,8 @@
 #include <boost/test/unit_test.hpp>
-#include <flexcore/pure/pure_ports.hpp>
-#include <flexcore/pure/mux_ports.hpp>
-#include <flexcore/core/connection.hpp>
+
+#include "pure/pure_ports.hpp"
+#include "pure/mux_ports.hpp"
+#include "core/connection.hpp"
 
 using namespace fc;
 

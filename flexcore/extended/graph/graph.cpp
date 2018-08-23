@@ -1,5 +1,5 @@
-#include <flexcore/extended/graph/graph.hpp>
-#include <flexcore/scheduler/parallelregion.hpp>
+#include "extended/graph/graph.hpp"
+#include "scheduler/parallelregion.hpp"
 
 #include <boost/graph/adjacency_list.hpp>
 #include <boost/graph/graphviz.hpp>

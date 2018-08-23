@@ -1,7 +1,7 @@
 #ifndef SRC_PORTS_CONNECTION_UTIL_HPP_
 #define SRC_PORTS_CONNECTION_UTIL_HPP_
 
-#include <flexcore/core/traits.hpp>
+#include "core/traits.hpp"
 
 #include <utility>
 

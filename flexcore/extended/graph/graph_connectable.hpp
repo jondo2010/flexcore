@@ -1,12 +1,12 @@
 #ifndef SRC_GRAPH_GRAPH_CONNECTABLE_HPP_
 #define SRC_GRAPH_GRAPH_CONNECTABLE_HPP_
 
-#include <flexcore/core/connection.hpp>
-#include <flexcore/core/connection_util.hpp>
-#include <flexcore/core/detail/connection_utils.hpp>
-#include <flexcore/extended/graph/graph.hpp>
-#include <flexcore/extended/graph/traits.hpp>
-#include <flexcore/utils/demangle.hpp>
+#include "core/connection.hpp"
+#include "core/connection_util.hpp"
+#include "core/detail/connection_utils.hpp"
+#include "extended/graph/graph.hpp"
+#include "extended/graph/traits.hpp"
+#include "utils/demangle.hpp"
 
 #include <cassert>
 

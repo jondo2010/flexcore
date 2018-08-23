@@ -1,8 +1,8 @@
 #ifndef SRC_PORTS_STREAM_SOURCES_STREAM_QUERY_FUNCTION_HPP_
 #define SRC_PORTS_STREAM_SOURCES_STREAM_QUERY_FUNCTION_HPP_
 
-#include <flexcore/core/connection.hpp>
-#include <flexcore/core/traits.hpp>
+#include "core/connection.hpp"
+#include "core/traits.hpp"
 
 #include <cassert>
 #include <functional>

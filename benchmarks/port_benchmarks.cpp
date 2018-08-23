@@ -1,7 +1,7 @@
 #include <benchmark/benchmark.h>
 
-#include <flexcore/core/connection.hpp>
-#include <flexcore/core/connectables.hpp>
+#include "flexcore/core/connection.hpp"
+#include "flexcore/core/connectables.hpp"
 
 #include "benchmarkfunctions.h"
 

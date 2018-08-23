@@ -1,12 +1,12 @@
 #ifndef SRC_PORTS_EVENT_SOURCES_EVENT_SOURCES_HPP_
 #define SRC_PORTS_EVENT_SOURCES_EVENT_SOURCES_HPP_
 
-#include <flexcore/core/traits.hpp>
-#include <flexcore/core/connection_util.hpp>
-#include <flexcore/pure/detail/active_connection_proxy.hpp>
-#include <flexcore/pure/detail/port_traits.hpp>
-#include <flexcore/pure/detail/port_utils.hpp>
-#include <flexcore/pure/port_connection.hpp>
+#include "core/traits.hpp"
+#include "core/connection_util.hpp"
+#include "pure/detail/active_connection_proxy.hpp"
+#include "pure/detail/port_traits.hpp"
+#include "pure/detail/port_utils.hpp"
+#include "pure/port_connection.hpp"
 
 #include <cassert>
 #include <memory>

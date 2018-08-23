@@ -5,8 +5,8 @@
  *      Author: ckielwein
  */
 
-#include <flexcore/scheduler/parallelregion.hpp>
-#include <flexcore/scheduler/cyclecontrol.hpp>
+#include "scheduler/parallelregion.hpp"
+#include "scheduler/cyclecontrol.hpp"
 
 namespace fc
 {

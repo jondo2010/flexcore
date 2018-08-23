@@ -1,6 +1,6 @@
-#include <flexcore/pure/pure_ports.hpp>
-#include <flexcore/scheduler/parallelregion.hpp>
-#include <flexcore/scheduler/cyclecontrol.hpp>
+#include "pure/pure_ports.hpp"
+#include "scheduler/parallelregion.hpp"
+#include "scheduler/cyclecontrol.hpp"
 
 #include <boost/test/unit_test.hpp>
 
@@ -9,7 +9,7 @@
 #pragma GCC diagnostic ignored "-Wpragmas"       // tell gcc to ignore the unknown warning below
 #pragma GCC diagnostic ignored "-Wkeyword-macro" // tell clang to ignore this warning
 #define private public
-#include <flexcore/infrastructure.hpp>
+#include "infrastructure.hpp"
 #undef private
 #pragma GCC diagnostic pop
 

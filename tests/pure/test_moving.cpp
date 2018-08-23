@@ -1,7 +1,7 @@
 #include <boost/test/unit_test.hpp>
 
-#include <flexcore/core/connection.hpp>
-#include <flexcore/pure/pure_ports.hpp>
+#include "core/connection.hpp"
+#include "pure/pure_ports.hpp"
 
 #include <algorithm>
 #include <vector>

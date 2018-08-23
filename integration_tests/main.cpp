@@ -5,9 +5,9 @@
 #include <ctime>
 #include <thread>
 
-#include <flexcore/extended/base_node.hpp>
-#include <flexcore/ports.hpp>
-#include <flexcore/infrastructure.hpp>
+#include "flexcore/extended/base_node.hpp"
+#include "flexcore/ports.hpp"
+#include "flexcore/infrastructure.hpp"
 
 #include <boost/scope_exit.hpp>
 
@@ -15,81 +15,81 @@ using namespace fc;
 
 struct null : tree_base_node
 {
-	explicit null(const node_args& node) : tree_base_node(node) {}
+    explicit null(const node_args& node) : tree_base_node(node) {}
 };
 
 int main()
 {
+    std::cout << "Starting Dummy Solution\n";
+    std::cout << "build up infrastructure \n";
+    fc::infrastructure infrastructure;
 
-	std::cout << "Starting Dummy Solution\n";
-	std::cout << "build up infrastructure \n";
-	fc::infrastructure infrastructure;
+    auto first_region = infrastructure.add_region("first_region", fc::thread::cycle_control::medium_tick);
 
-	auto first_region = infrastructure.add_region(
-			"first_region",
-			fc::thread::cycle_control::medium_tick);
+    std::cout << "start building connections\n";
 
-	std::cout << "start building connections\n";
+    using clock = fc::virtual_clock::system;
+    using time_point = clock::time_point;
 
-	using clock = fc::virtual_clock::system;
-	using time_point = clock::time_point;
+    fc::pure::event_source<time_point> source;
+    first_region->ticks.work_tick() >> [&source]() {
+        source.fire(clock::now());
+    };
 
-	fc::pure::event_source<time_point> source;
-	first_region->ticks.work_tick()
-			>> [&source](){ source.fire(clock::now()); };
+    source >> [](time_point t) {
+        return clock::to_time_t(t);
+    } >> [](time_t t) {
+        std::cout << "local time: " << std::localtime(&t)->tm_sec << "\n";
+    };
 
-	source >> [](time_point t){ return clock::to_time_t(t); }
-		   >> [](time_t t) { std::cout << std::localtime(&t)->tm_sec << "\n"; };
+    first_region->ticks.work_tick() >> [count = 0]() mutable {
+        return count++;
+    } >> [](int i) {
+        std::cout << "counted ticks: " << i << "\n";
+    };
 
-	first_region->ticks.work_tick()
-			>> [count = 0]() mutable {return count++;}
-			>> [](int i) { std::cout << "counted ticks: " << i << "\n"; };
+    // create a connection with region transition
+    auto second_region = infrastructure.add_region("region two", fc::thread::cycle_control::slow_tick);
 
+    second_region->ticks.work_tick() >> []() {
+        std::cout << "Zonk!\n";
+    };
 
-	//create a connection with region transition
-	auto second_region = infrastructure.add_region(
-			"region two",
-			fc::thread::cycle_control::slow_tick);
+    auto& child_a = infrastructure.node_owner().make_child_named<null>(first_region, "source_a");
+    auto& child_b = infrastructure.node_owner().make_child_named<null>(second_region, "sink_b");
+    auto& child_c = infrastructure.node_owner().make_child_named<null>(second_region, "source_c");
 
-	second_region->ticks.work_tick() >> [](){ std::cout << "Zonk!\n"; };
+    event_source<std::string> string_source(&child_a);
+    fc::event_sink<std::string> string_sink(&child_b, [second_region](std::string in) {
+        std::cout << second_region->get_id().key << " received: " << in << "\n";
+    });
 
-	auto& child_a = infrastructure.node_owner().
-			make_child_named<null>(first_region, "source_a");
-	auto& child_b = infrastructure.node_owner().
-			make_child_named<null>(second_region, "sink_b");
-	auto& child_c = infrastructure.node_owner().
-			make_child_named<null>(second_region, "source_c");
+    string_source >> string_sink;
+    first_region->ticks.work_tick() >> [&string_source, id = first_region->get_id().key]() mutable {
+        string_source.fire("a magic string from " + id);
+    };
 
-	event_source<std::string> string_source(&child_a);
-	fc::event_sink<std::string> string_sink(&child_b,
-			[second_region](std::string in){std::cout << second_region->get_id().key << " received: " << in << "\n";});
+    event_source<std::string> string_source_2(&child_c);
+    string_source_2 >> string_sink;
 
-	string_source >> string_sink;
-	first_region->ticks.work_tick()
-			>>	[&string_source, id = first_region->get_id().key]() mutable
-				{
-					string_source.fire("a magic string from " + id);
-				};
+    if (true)
+        string_source_2.connect(string_sink);
 
-	event_source<std::string> string_source_2(&child_c);
-	string_source_2 >> string_sink;
+    {
+        std::ofstream out{"./out.dot"};
+        infrastructure.visualize(out);
+    }
 
-	{
-		std::ofstream out{"./out.dot"};
-		infrastructure.visualize(out);
-	}
+    infrastructure.start_scheduler();
+    BOOST_SCOPE_EXIT(&infrastructure) { infrastructure.stop_scheduler(); }
+    BOOST_SCOPE_EXIT_END
 
-	infrastructure.start_scheduler();
-	BOOST_SCOPE_EXIT(&infrastructure) {
-		infrastructure.stop_scheduler();
-	} BOOST_SCOPE_EXIT_END
+    using namespace std::chrono_literals;
+    int iterations = 7;
+    while (iterations--)
+    {
+        infrastructure.iterate_main_loop();
+    }
 
-	using namespace std::chrono_literals;
-	int iterations = 7;
-	while (iterations--)
-	{
-		infrastructure.iterate_main_loop();
-	}
-
-	return 0;
+    return 0;
 }

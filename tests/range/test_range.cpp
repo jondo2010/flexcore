@@ -1,7 +1,7 @@
 #include <boost/test/unit_test.hpp>
 
-#include <flexcore/core/connection.hpp>
-#include <flexcore/range/actions.hpp>
+#include "core/connection.hpp"
+#include "range/actions.hpp"
 
 using namespace fc;
 

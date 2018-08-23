@@ -1,9 +1,12 @@
 
-#if !defined(__clang__)
-#define BOOST_ALL_DYN_LINK
+//#if !defined(__clang__)
+//#define BOOST_ALL_DYN_LINK
 #include <boost/test/unit_test.hpp>
-#include <flexcore/utils/logging/logger.hpp>
-#include <tests/nodes/owning_node.hpp>
+
+#include "flexcore/utils/logging/logger.hpp"
+
+#include "tests/nodes/owning_node.hpp"
+
 #include <sstream>
 
 BOOST_AUTO_TEST_SUITE(test_logging)
@@ -110,4 +113,4 @@ BOOST_AUTO_TEST_CASE( log_client_copy_and_move )
 
 BOOST_AUTO_TEST_SUITE_END()
 
-#endif // !defined(__clang__)
+//#endif // !defined(__clang__)

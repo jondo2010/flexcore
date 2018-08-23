@@ -1,5 +1,6 @@
-#include <flexcore/infrastructure.hpp>
-#include <flexcore/scheduler/parallelscheduler.hpp>
+#include "infrastructure.hpp"
+#include "scheduler/parallelscheduler.hpp"
+
 #include <memory>
 #include <stdexcept>
 

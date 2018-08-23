@@ -1,6 +1,7 @@
 #include <boost/test/unit_test.hpp>
-#include <flexcore/utils/settings/settings.hpp>
-#include <flexcore/utils/settings/settings_backend.hpp>
+
+#include "utils/settings/settings.hpp"
+#include "utils/settings/settings_backend.hpp"
 
 BOOST_AUTO_TEST_SUITE(test_setting_registry)
 

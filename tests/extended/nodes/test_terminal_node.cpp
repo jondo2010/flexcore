@@ -1,10 +1,11 @@
 #include <boost/test/unit_test.hpp>
-#include <flexcore/extended/nodes/terminal.hpp>
-#include <flexcore/ports.hpp>
-#include <flexcore/pure/pure_node.hpp>
 
-#include <pure/sink_fixture.hpp>
-#include <nodes/owning_node.hpp>
+#include "extended/nodes/terminal.hpp"
+#include "ports.hpp"
+#include "pure/pure_node.hpp"
+
+#include "../../pure/sink_fixture.hpp"
+#include "../../nodes/owning_node.hpp"
 
 using namespace fc;
 

@@ -1,8 +1,9 @@
 #ifndef SRC_NODES_BASE_NODE_HPP_
 #define SRC_NODES_BASE_NODE_HPP_
 
-#include <flexcore/extended/node_fwd.hpp>
-#include <flexcore/ports.hpp>
+#include "extended/node_fwd.hpp"
+#include "ports.hpp"
+
 #include <adobe/forest.hpp>
 
 #include <cassert>

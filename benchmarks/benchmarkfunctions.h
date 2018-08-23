@@ -8,9 +8,9 @@
 #ifndef BENCHMARKS_BENCHMARKFUNCTIONS_H_
 #define BENCHMARKS_BENCHMARKFUNCTIONS_H_
 
-#include <flexcore/pure/pure_ports.hpp>
-#include <flexcore/extended/nodes/terminal.hpp>
-#include <flexcore/ports.hpp>
+#include "flexcore/pure/pure_ports.hpp"
+#include "flexcore/extended/nodes/terminal.hpp"
+#include "flexcore/ports.hpp"
 
 #include "../tests/nodes/owning_node.hpp"
 

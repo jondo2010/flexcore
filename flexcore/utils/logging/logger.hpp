@@ -1,7 +1,7 @@
 #ifndef SRC_LOGGING_LOGGER_HPP_
 #define SRC_LOGGING_LOGGER_HPP_
 
-#include <flexcore/extended/node_fwd.hpp>
+#include "extended/node_fwd.hpp"
 
 #include <functional>
 #include <memory>

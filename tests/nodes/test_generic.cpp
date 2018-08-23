@@ -1,9 +1,10 @@
 #include <boost/test/unit_test.hpp>
 
-#include <flexcore/extended/nodes/generic.hpp>
+#include "extended/nodes/generic.hpp"
 
 #include "owning_node.hpp"
-#include <pure/sink_fixture.hpp>
+
+#include "../pure/sink_fixture.hpp"
 
 BOOST_AUTO_TEST_SUITE(test_generic_nodes)
 

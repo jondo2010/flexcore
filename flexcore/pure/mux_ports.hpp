@@ -3,9 +3,10 @@
 
 #include <tuple>
 #include <utility>
-#include <flexcore/core/detail/function_traits.hpp>
-#include <flexcore/core/traits.hpp>
-#include <flexcore/core/tuple_meta.hpp>
+
+#include "core/detail/function_traits.hpp"
+#include "core/traits.hpp"
+#include "core/tuple_meta.hpp"
 
 namespace fc
 {

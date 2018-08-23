@@ -1,7 +1,9 @@
+#include "extended/base_node.hpp"
+
 #include <boost/algorithm/string/join.hpp>
 #include <boost/format.hpp>
-#include <flexcore/extended/base_node.hpp>
-#include <flexcore/extended/visualization/visualization.hpp>
+
+#include "extended/visualization/visualization.hpp"
 
 #include <stack>
 

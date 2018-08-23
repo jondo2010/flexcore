@@ -8,8 +8,8 @@
 #ifndef SRC_UTIL_SETTINGS_CONTAINER_HPP_
 #define SRC_UTIL_SETTINGS_CONTAINER_HPP_
 
-#include <flexcore/utils/generic_container.hpp>
-#include <flexcore/utils/settings/settings.hpp>
+#include "utils/generic_container.hpp"
+#include "utils/settings/settings.hpp"
 
 namespace fc
 {

@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "intelliSenseMode": "gcc-x64",
+            "cppStandard": "c++14",
+            "includePath": [
+                "${workspaceFolder}/bazel-flexcore/external/boost",
+                "${workspaceFolder}/flexcore",
+                "${workspaceFolder}/flexcore/3rdparty",
+                "${workspaceFolder}"
+            ],
+            "browse": {
+                "path": [],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 4
+}

@@ -1,10 +1,11 @@
 #include <boost/test/unit_test.hpp>
 
-#include <flexcore/extended/ports/node_aware.hpp>
-#include <flexcore/pure/pure_ports.hpp>
-#include <flexcore/extended/base_node.hpp>
-#include <nodes/owning_node.hpp>
-#include <pure/sink_fixture.hpp>
+#include "extended/ports/node_aware.hpp"
+#include "pure/pure_ports.hpp"
+#include "extended/base_node.hpp"
+
+#include "../../nodes/owning_node.hpp"
+#include "../../pure/sink_fixture.hpp"
 
 #include <boost/mpl/list.hpp>
 #include <boost/variant.hpp>

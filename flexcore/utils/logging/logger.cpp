@@ -1,8 +1,10 @@
 
 #define BOOST_ALL_DYN_LINK
 #define BOOST_LOG_USE_NATIVE_SYSLOG
-#include <flexcore/utils/logging/logger.hpp>
-#include <boost/utility/empty_deleter.hpp>
+#include "utils/logging/logger.hpp"
+
+//#include <boost/utility/empty_deleter.hpp>
+#include <boost/core/null_deleter.hpp>
 #include <boost/log/attributes/clock.hpp>
 #include <boost/log/expressions.hpp>
 #include <boost/log/sinks/text_file_backend.hpp>
@@ -126,7 +128,7 @@ stream_handle logger::add_stream_log(std::ostream& stream, logger::flush flush,
                                      logger::cleanup cleanup)
 {
 	auto stream_sink = boost::make_shared<sinks::text_ostream_backend>();
-	auto shared_stream = boost::shared_ptr<std::ostream>(&stream, boost::empty_deleter());
+	auto shared_stream = boost::shared_ptr<std::ostream>(&stream, boost::null_deleter());
 	stream_sink->add_stream(shared_stream);
 	stream_sink->auto_flush(static_cast<bool>(flush));
 	auto sink_front = boost::make_shared<sync_sink<sinks::text_ostream_backend>>(stream_sink);

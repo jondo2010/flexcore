@@ -8,7 +8,7 @@
 #ifndef SRC_PORTS_PORT_TRAITS_HPP_
 #define SRC_PORTS_PORT_TRAITS_HPP_
 
-#include <flexcore/core/traits.hpp>
+#include "core/traits.hpp"
 
 // A collection of port specific meta functions and traits.
 

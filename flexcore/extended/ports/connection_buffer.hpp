@@ -4,8 +4,8 @@
 #include <functional>
 #include <memory>
 
-#include <flexcore/pure/pure_ports.hpp>
-#include <flexcore/extended/ports/token_tags.hpp>
+#include "pure/pure_ports.hpp"
+#include "extended/ports/token_tags.hpp"
 
 namespace fc
 {

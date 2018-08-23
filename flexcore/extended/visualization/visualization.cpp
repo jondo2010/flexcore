@@ -1,8 +1,7 @@
 #include "visualization.hpp"
 
-#include <flexcore/scheduler/parallelregion.hpp>
-
-#include <flexcore/extended/graph/graph.hpp>
+#include "scheduler/parallelregion.hpp"
+#include "extended/graph/graph.hpp"
 
 #include <boost/algorithm/string/replace.hpp>
 

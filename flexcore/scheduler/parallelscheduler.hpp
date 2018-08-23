@@ -1,7 +1,7 @@
 #ifndef SRC_SCHEDULER_PARALLELSCHEDULER_HPP_
 #define SRC_SCHEDULER_PARALLELSCHEDULER_HPP_
 
-#include <flexcore/scheduler/scheduler.hpp>
+#include "scheduler/scheduler.hpp"
 
 #include <thread>
 #include <vector>

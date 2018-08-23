@@ -1,8 +1,8 @@
 // boost
 #include <boost/test/unit_test.hpp>
 
-#include <flexcore/extended/ports/connection_buffer.hpp>
-#include <flexcore/pure/pure_ports.hpp>
+#include "extended/ports/connection_buffer.hpp"
+#include "pure/pure_ports.hpp"
 
 BOOST_AUTO_TEST_SUITE(test_eventbuffer)
 

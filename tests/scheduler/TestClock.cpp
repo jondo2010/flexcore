@@ -2,7 +2,8 @@
  * Unit Tests for our virtual clock.
  */
 
-#include <flexcore/scheduler/clock.hpp>
+#include "scheduler/clock.hpp"
+
 #include <boost/test/unit_test.hpp>
 
 
